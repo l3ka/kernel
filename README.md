@@ -10,8 +10,8 @@ ZAVRSENO  ---   GMP	     ---   libgmp3-dev
 ZAVRSENO  ---   MPC	     ---   libmpc-dev 
 ZAVRSENO  ---   MPFR	   ---   libmpfr-dev 
 ZAVRSENO  ---   Texinfo	 ---   texinfo 
-ZAVRSENO  ---   CLooG	   ---   libcloog-isl-dev
-ZAVRSENO  ---   ISL	     ---   libisl-dev
+ZAVRSENO  ---   CLooG	   ---   libcloog-isl-dev 
+ZAVRSENO  ---   ISL	     ---   libisl-dev 
 
 2. Skinuti u home/src source code linkera i compilera
 You can download the desired Binutils release by visiting the Binutils website or directly accessing the GNU main mirror.
