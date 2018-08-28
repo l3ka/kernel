@@ -1,4 +1,9 @@
-Windows X
+/*
+*  Title: Windows X
+*  By: Darko Lekic (lekic.d7@gmail.com)
+*  By: Nikola Pejic (peja96bl@gmail.com)
+*  Description: OOS description 
+*/
 
 https://wiki.osdev.org/GCC_Cross-Compiler
 
@@ -15,15 +20,10 @@ You can download the desired Binutils release by visiting the Binutils website o
 You can download the desired GCC release by visiting the GCC website or directly accessing the GNU main mirror.
 
 3. Za trajno postavljanje globalnih varijabli
-# gedit ~/.profile
+/# gedit ~/.profile
 
-
-Verzija cross complier 
+Za provjeru verzije cross complier-a
 $HOME/opt/cross/bin/$TARGET-gcc --version
-
-
-
-
 
 
 Osnovi operativnih sistema:
@@ -74,3 +74,12 @@ jmp 0x08:flush2 --> znaci uradi far jump na flush2 koristeci ovaj code segment, 
 ISR koje ne prihvataju kod greske, kod njih push-amo 0(nulu). 
 
 C da bi radio mora imati sistemski stek. Ako ne setujemo stek necemo moci da radimo iz C-a, linkovace se ali ce se srusiti, imacemo triple-fault. Moramo uraditi boot iz asemblera i moramo setovati sistemski stek. 
+
+IRQ je tabela sa prioritetima, i ako imamo 2 irq-a koji treba da budu servisirani, bice servisiran onaj sa nizim indeksom, odnosno sa vecim prioritetom(nizi indeks => veci prioritet).
+Multiboot sekcija mora biti na pocetku i mora pocinjati nakon jednog megabajta. Zasto, Zatooo! Tako Grub ocekuje. Grub ce pokusa da procita to, ako ne nadje na 1MB odustaje. Multiboot mora da pocne na tacno 1MB od pocetka fajla. 
+Kod steka prvo rezervisemo, pa stavimo labelu jer stek raste u suprotnom smjeru. 
+Sve interrupt servisne rutine moraju da zavrsavaju sa iret instrukcijom, jer one push-aju i specijalne registre. 
+.bss - Block Started by Symbol, segment kod nas sadrzi stek. 
+.text segment je code segment. 
+Voditi racuna da ne napravimo preklapanje izmedju prostora registrovanog u gdt-u i onoga u linkerskoj skripti??. 
+I flag u skripti je specifikovan kako bi se linkovali svi common fajlovi iz include direktorijuma. 
