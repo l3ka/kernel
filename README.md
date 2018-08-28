@@ -22,19 +22,19 @@ You can download the desired GCC release by visiting the GCC website or directly
 * \# gedit ~/.profile
 
 Za provjeru verzije cross complier-a </br>
-$HOME/opt/cross/bin/$TARGET-gcc --version
+* $HOME/opt/cross/bin/$TARGET-gcc --version
 
 
 Osnovi operativnih sistema: </br>
 Projektni, objasnjenja: </br>
-** One of the most important system resources that you need to manage is the processor or CPU </br>
-** The next most important resource in the system is fairly obvious: Memory </br>
-** The last resource that your kernel needs to manage are hardware resources </br>
-** -j2 kod make gdje nema install </br>
+* One of the most important system resources that you need to manage is the processor or CPU </br>
+* The next most important resource in the system is fairly obvious: Memory </br>
+* The last resource that your kernel needs to manage are hardware resources </br>
+* -j2 kod make gdje nema install => kako bi ubrzalo postupak, koristi vise jezgara procesora, nema smisla kod single core, tad cak imamo kontra efekat, usporava se rad </br>
 
-
-qemu-system-i386 -cdrom os.iso </br>
-qemu-system-i386 -kernel os.bin </br>
+QEMU pokretanje iz konzole: </br> 
+* qemu-system-i386 -cdrom os.iso </br>
+* qemu-system-i386 -kernel os.bin </br>
 
 
 
