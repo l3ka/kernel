@@ -66,8 +66,8 @@ void beep()
 {
 	for(int i = 0; i<10000; i++)
 		play_sound(1000);
- 	// timer_wait(100);
- 	nosound();
+	// timer_wait(100);
+	nosound();
 	// set_PIT_2(old_frequency);
 }
 
