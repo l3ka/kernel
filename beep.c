@@ -46,7 +46,7 @@ static void play_sound(uint32_t nFrequence)
  	outportb(0x42, (uint8_t) (Div) );
  	outportb(0x42, (uint8_t) (Div >> 8));
  
-    // And play the sound using the PC speaker
+	// And play the sound using the PC speaker
  	tmp = inportb(0x61);
   	if (tmp != (tmp | 3)) 
 	{
