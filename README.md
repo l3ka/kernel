@@ -1,2 +1,1 @@
-# kernel
-Projektni zadatak iz Osnova operativnih sistema 
+Windows X
