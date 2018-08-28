@@ -7,44 +7,44 @@
 
 #include <system.h>
  
-void *memcpy(void *dest, const void *src, size_t count)
+void *memcpy(void* dest, const void* src, size_t count)
 {
-    const char *sp = (const char *)src;
-    char *dp = (char *)dest;
-    for(; count != 0; count--) 
+	const char *sp = (const char *)src;
+	char *dp = (char *)dest;
+	for(; count != 0; count--) 
 		*dp++ = *sp++;
-    return dest;
+	return dest;
 }
 
-void *memset(void *dest, char val, size_t count)
+void *memset(void* dest, char val, size_t count)
 {
-    char *temp = (char *)dest;
-    for( ; count != 0; count--) 
+	char *temp = (char *)dest;
+	for( ; count != 0; count--) 
 		*temp++ = val;
-    return dest;
+	return dest;
 }
 
-unsigned short *memsetw(unsigned short *dest, unsigned short val, size_t count)
+unsigned short *memsetw(unsigned short* dest, unsigned short val, size_t count)
 {
-    unsigned short *temp = (unsigned short *)dest;
-    for( ; count != 0; count--) 
+	unsigned short *temp = (unsigned short *)dest;
+	for( ; count != 0; count--) 
 		*temp++ = val;
-    return dest;
+	return dest;
 }
 
-size_t strlen(const char *str)
+size_t strlen(const char* str)
 {
 	size_t retval;
-    for(retval = 0; *str != '\0'; str++) 
+	for(retval = 0; *str != '\0'; str++) 
 		retval++;
-    return retval;
+	return retval;
 }
 
 unsigned char inportb (unsigned short _port)
 {
 	unsigned char rv;
-    __asm__ __volatile__ ("inb %1, %0" : "=a" (rv) : "dN" (_port));
-    return rv;
+	__asm__ __volatile__ ("inb %1, %0" : "=a" (rv) : "dN" (_port));
+	return rv;
 }
 
 void outportb (unsigned short _port, unsigned char _data)
@@ -55,21 +55,21 @@ void outportb (unsigned short _port, unsigned char _data)
 
 void main()
 {
-    int i;
-    
-    gdt_install();
-    idt_install();
-    isrs_install();
-    irq_install();
-    init_video();
-    
-    timer_install();
-    keyboard_install();
-    mouse_install();
+	int i;
 
-    __asm__ __volatile__ ("sti");
+	gdt_install();
+	idt_install();
+	isrs_install();
+	irq_install();
+	init_video();
 
-    puts("\t\t\t\tStopwatch\n");
+	timer_install();
+	keyboard_install();
+	mouse_install();
 
-    for (;;);
+	__asm__ __volatile__ ("sti");
+
+	puts("\t\t\t\tStopwatch\n");
+
+	for (;;);
 }
