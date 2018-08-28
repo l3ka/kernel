@@ -5,7 +5,7 @@
 
 https://wiki.osdev.org/GCC_Cross-Compiler
 
-1. Instalirati sledece:
+1. Instalirati sledece: 
 ZAVRSENO  ---   GMP	     ---   libgmp3-dev 
 ZAVRSENO  ---   MPC	     ---   libmpc-dev 
 ZAVRSENO  ---   MPFR	   ---   libmpfr-dev 
