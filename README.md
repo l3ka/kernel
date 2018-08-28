@@ -3,7 +3,6 @@
 *  By: Darko Lekic (lekic.d7@gmail.com)
 *  By: Nikola Pejic (peja96bl@gmail.com)
 *  Description: OOS description 
-*
 */
 
 https://wiki.osdev.org/GCC_Cross-Compiler
