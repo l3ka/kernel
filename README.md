@@ -1,19 +1,17 @@
-/*
 *  Title: Windows X
 *  By: Darko Lekic (lekic.d7@gmail.com)
 *  By: Nikola Pejic (peja96bl@gmail.com)
 *  Description: OOS description 
-*/
 
 https://wiki.osdev.org/GCC_Cross-Compiler
 
 1. Instalirati sledece:
-ZAVRSENO     GMP	libgmp3-dev 
-ZAVRSENO     MPC	libmpc-dev 
-ZAVRSENO     MPFR	libmpfr-dev 
-ZAVRSENO     Texinfo	texinfo 
-ZAVRSENO     CLooG	libcloog-isl-dev
-ZAVRSENO     ISL	libisl-dev
+ZAVRSENO  ---   GMP	     ---   libgmp3-dev 
+ZAVRSENO  ---   MPC	     ---   libmpc-dev 
+ZAVRSENO  ---   MPFR	   ---   libmpfr-dev 
+ZAVRSENO  ---   Texinfo	 ---   texinfo 
+ZAVRSENO  ---   CLooG	   ---   libcloog-isl-dev
+ZAVRSENO  ---   ISL	     ---   libisl-dev
 
 2. Skinuti u home/src source code linkera i compilera
 You can download the desired Binutils release by visiting the Binutils website or directly accessing the GNU main mirror.
