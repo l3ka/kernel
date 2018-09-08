@@ -1,7 +1,7 @@
 *  Title: Windows X
 *  By: Darko Lekic (lekic.d7@gmail.com)
 *  By: Nikola Pejic (peja96bl@gmail.com)
-*  Description: OOS description 
+*  Description: Project task from the Introduction to Operating Systems 
 
 https://wiki.osdev.org/GCC_Cross-Compiler
 
